@@ -1,0 +1,8 @@
+.card {
+  background: linear-gradient(to right, $favorite-color, darkmagenta);
+  --bs-card-border-radius: 2rem;
+  --bs-card-color: white;
+}
+.card img, .card-footer {
+  --bs-card-inner-border-radius: calc(2rem + 1px);
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My website</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#news">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#img-container">Gallery</a>
+              </li>
+            </ul>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheck"
+                checked
+              />
+              <label class="form-check-label" for="flexSwitchCheck"
+                >Dark</label
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/dog.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-5">My Dogs</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/bridge.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-5">Scotland</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/lake.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-5">Lago Maggiore</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container" id="news">
+      <div class="row">
+        <div class="col mt-5">
+          <h2>News</h2>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 my-3">
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/new-york.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">New York</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam sapiente molestias exercitationem blanditiis eaque tempora voluptate quisquam error vel.
+              </p>
+              <button class="btn btn-custom-color">Read more</button>
+            </div>
+            <div class="card-footer bg-favorite">
+              <small class="text-light">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/dog.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">My dogs</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam sapiente molestias exercitationem blanditiis eaque tempora voluptate quisquam error vel.
+              </p>
+              <button class="btn btn-custom-color">Read more</button>
+            </div>
+            <div class="card-footer bg-favorite">
+              <small class="text-light">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/lake.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Lago Maggiore</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam sapiente molestias exercitationem blanditiis eaque tempora voluptate quisquam error vel.
+              </p>
+              <button class="btn btn-custom-color">Read more</button>
+            </div>
+            <div class="card-footer bg-favorite">
+              <small class="text-light">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="bg-success w-75 p-2 text-white">
+            This is default success background
+          </div>
+          <div
+            class="bg-success p-2 border border-danger border-5 text-white bg-opacity-75"
+          >
+            This is 75% opacity success background
+          </div>
+          <div class="bg-success p-2" style="--bs-bg-opacity: 0.2">
+            This is 20% opacity success background
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col mt-5 mb-2">
+          <h2>Gallery</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-0" id="img-container">
+        <div class="col">
+          <img src="img/new-york.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="new-york"/>
+        </div>
+        <div class="col">
+          <img src="img/lake.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="lake"/>
+        </div>
+        <div class="col">
+          <img src="img/dog.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="dog"/>
+        </div>
+        <div class="col">
+          <img src="img/river.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="river"/>
+        </div>
+        <div class="col">
+          <img src="img/bridge.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="bridge"/>
+        </div>
+        <div class="col">
+          <img src="img/dog.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="dog"/>
+        </div>
+        <div class="col">
+          <img src="img/new-york.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="new-york"/>
+        </div>
+        <div class="col">
+          <img src="img/river.jpg" class="img-fluid" alt="" data-bs-toggle="modal" data-bs-target="#gallery-modal" data-bs-photo="river"/>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="gallery-modal"
+      tabindex="-1"
+      aria-labelledby="galleryLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="galleryLabel">Gallery</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" >
+            <img src="#" class="img-fluid" id="zoomed-img"/>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Chiudi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

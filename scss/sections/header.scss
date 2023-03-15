@@ -1,0 +1,23 @@
+.carousel-item {
+  max-height: 80vh;
+}
+
+// Con la sintassi [data-bs-theme=light] posso intercettare la light (o dark) mode!
+[data-bs-theme=light] .carousel .carousel-item img {
+  filter: brightness(0.7);
+}
+
+[data-bs-theme=dark] .carousel {
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    h5 {
+      color: #000;
+    }
+  }
+  .carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: none;
+  }
+} 

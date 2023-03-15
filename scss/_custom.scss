@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+// CUSTOM FONT
+$font-family-sans-serif: 'Roboto', sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+
+$utilities: (
+  "larghezza": (
+    property: width,
+    class: larg,
+    values: (
+      33: 33%,
+      66: 66%,
+      75: 75%
+    )
+  )
+);
+
+$custom-color: rgb(79, 0, 249);
+$favorite-color: #510051;
+$light-blue: $blue-300;
+
+$carousel-control-next-icon-bg:  url(
+  'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{$favorite-color}" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"> <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>'
+);
+
+$carousel-control-prev-icon-bg:  url(
+  'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#{$favorite-color}" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"> <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/> </svg>'
+);
+
+// Create your own map
+$custom-colors: (
+  "custom-color": $custom-color,
+  "favorite-color": $favorite-color
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: map-merge($spacers, (6: 4rem))
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      local-vars: (
+        "bg-opacity": 1
+      ),
+      values: map-merge(
+        $utilities-bg-colors,
+        (
+          "custom": rgba($custom-color, var(--#{$prefix}bg-opacity)),
+          "favorite": rgba($favorite-color, var(--#{$prefix}bg-opacity)),
+        )
+      )
+    ),
+  )
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

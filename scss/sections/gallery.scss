@@ -1,0 +1,8 @@
+#img-container {
+  img {
+    cursor: pointer;
+    &:hover {
+      filter: brightness(0.6);
+    }
+  }
+}

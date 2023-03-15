@@ -1,0 +1,63 @@
+// Modifico uno dei colori di Bootstrap
+$blue: #0000ff;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Creo nuovi colori
+$custom-color: rgb(79, 0, 249);
+$favorite-color: #510051;
+// Li raggruppo in una map
+$custom-colors: (
+  "custom-color": $custom-color,
+  "favorite-color": $favorite-color
+);
+// Aggiungo la map all'elenco di colori: ora li posso usare in Bootstrap!
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'larghezza': (
+      property: width,
+      class: larg,
+      values: (
+        33: 33%,
+        50: 50%,
+        66: 66%
+      )
+    ),
+    "padding": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: map-merge($spacers, (
+        6: 5rem
+      ))
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      local-vars: (
+        "bg-opacity": 1
+      ),
+      values: map-merge(
+        $utilities-bg-colors,
+        (
+          "favorite": rgba($favorite-color, var(--#{$prefix}bg-opacity)),
+        )
+      )
+    )
+  )
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Qui importo altri files in cui assegno stili personalizzati ad alcune parti del sito
+@import 'sections/header';
+@import 'sections/news';
+@import 'sections/gallery';
